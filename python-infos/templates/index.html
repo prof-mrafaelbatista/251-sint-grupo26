@@ -1,0 +1,36 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+<div class="container content-below-navbar">
+    <div class="text-center">
+        <img src="https://www.python.org/static/community_logos/python-logo.png" alt="Python Logo" class="img-fluid mb-4" style="max-height: 150px;">
+        <h1 class="display-4 fw-bold mb-4">Python Infos</h1>
+        <p class="lead mb-5">Seu guia completo para aprender Python!</p>
+    </div>
+
+    <div class="row justify-content-center g-4">
+        <div class="col-md-6">
+            <div class="card h-100 border-success">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-success">
+                        <i class="bi bi-journal-bookmark me-2"></i>Dicionário de Termos
+                    </h5>
+                    <p class="card-text">Consulte nosso glossário técnico com os principais conceitos do Python.</p>
+                    <a href="{{ url_for('glossario') }}" class="btn btn-outline-success mt-auto">Acessar Glossário</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 border-info">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-info">
+                        <i class="bi bi-question-circle me-2"></i>Teste Seu Conhecimento
+                    </h5>
+                    <p class="card-text">Desafie-se com nosso quiz interativo sobre Python.</p>
+                    <a href="{{ url_for('quiz') }}" class="btn btn-outline-info mt-auto">Fazer Quiz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
